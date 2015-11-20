@@ -1,0 +1,30 @@
+﻿//@using System.Collections.Generic
+@using System.Diagnostics
+@using System.Linq
+@using ISB.Website.ViewModels
+@using ISB.Website.ViewModels.DocTypes
+@using Our.Umbraco.Ditto
+@inherits UmbracoTemplatePage
+@{
+    var poco = Model.Content.As<Article>();
+    var featuredArticles = poco.Children.Select(a => a.As<Article>()).ToList();
+}
+
+ARTICLE Overview
+
+<h1><a href="@poco.Url">@poco.PageTitle</a></h1>
+
+
+<p>
+    @poco.Summary
+</p>
+
+
+<h1>Metat data</h1>
+@poco.MetaTitle
+@poco.MetaDescription
+
+@Html.Partial("_articles", poco.FilteredArticlesByTag.ToList())
+
+
+

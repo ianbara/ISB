@@ -1,0 +1,30 @@
+﻿@using System.Linq
+@using ISB.Website.ViewModels;
+@using System.Collections.Generic;
+
+@model List<Article>
+
+
+    <ul>
+        @foreach (var article in Model)
+        {
+            <li>
+                <a href="@article.Url">@article.Name</a>
+                <p>@article.GetPropertyValue("Summary")</p>
+
+
+
+
+                TAGS : @article.Tags
+                <ul>
+                    @foreach (var tag in article.TagsList)
+                    {
+                        <li><a href="/articles?tag=@tag">@tag</a></li>
+                    }
+
+                </ul>
+
+            </li>
+
+        }
+    </ul>

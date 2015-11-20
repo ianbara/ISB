@@ -1,0 +1,13 @@
+﻿
+@model ISB.Website.Models.SiteNavigation
+
+<nav>
+    <ul id="menu">
+        @foreach (var navigationItem in Model.TopNavigation.NavigationItems)
+        {
+            <li>
+                <a href="@(navigationItem.Url)" id="header-link-@(navigationItem.Name.ToLower().Replace(" ", "-"))" target="@(navigationItem.NewWindow)">@navigationItem.Name</a>
+            </li>
+        }
+    </ul>
+</nav>

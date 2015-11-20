@@ -1,0 +1,22 @@
+﻿//@using System.Collections.Generic
+@using System.Diagnostics
+@using System.Linq
+@using DotNetOpenAuth.OpenId.Extensions.AttributeExchange
+@using ISB.Website.ViewModels
+@using ISB.Website.ViewModels.DocTypes
+@using Our.Umbraco.Ditto
+@*@inherits Umbraco.Web.Mvc.UmbracoViewPage<ISB.Website.ViewModels.DocTypes.Base.ViewModel<ContactUs>>*@
+@inherits UmbracoTemplatePage
+@{
+    var poco = Model.Content.As<ContactUs>();
+    
+    //var featuredArticles = poco.FeaturedArticles.Select(a => a.As<Article>()).ToList();
+}
+
+
+<h1>Contact Us</h1>
+
+@poco.BodyText
+
+@*@Html.Action("ContactForm", "Home")*@
+@Html.Partial("_ContactForm", new ContactForm())

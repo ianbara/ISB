@@ -1,0 +1,25 @@
+﻿//@using System.Collections.Generic
+@using System.Diagnostics
+@using System.Linq
+@using ISB.Website.ViewModels
+@using ISB.Website.ViewModels.DocTypes
+@using Our.Umbraco.Ditto
+@inherits UmbracoTemplatePage
+@{
+    var poco = Model.Content.As<Article>();
+}
+
+ARTICLE
+
+<h1>@poco.PageTitle</h1>
+
+
+<p>
+    @poco.Summary
+</p>
+
+
+TEMPLATE (@poco.Template)
+
+
+

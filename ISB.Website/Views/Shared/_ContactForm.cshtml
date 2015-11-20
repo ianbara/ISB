@@ -1,0 +1,22 @@
+﻿@using ISB.Website.Controllers
+@model ISB.Website.ViewModels.ContactForm
+
+<h2>Contact Form</h2>
+@using (Html.BeginUmbracoForm<ContactFormController>("ContactForm"))
+{
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+    @Html.ValidationMessageFor(m => m.Name)
+
+    @Html.LabelFor(m => m.Email)
+    @Html.TextBoxFor(m => m.Email)
+    @Html.ValidationMessageFor(m => m.Email)
+
+    @Html.LabelFor(m => m.MessageContent)
+    @Html.TextAreaFor(m => m.MessageContent)
+    @Html.ValidationMessageFor(m => m.MessageContent)
+
+    <h1>@ViewBag.SuccessMessage</h1>
+    
+    <input type="submit" value="Submit"/>
+}

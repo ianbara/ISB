@@ -355,6 +355,7 @@
     <Compile Include="ViewModels\DocTypes\Image.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Umbraco.sdf" />
     <Content Include="App_Plugins\Archetype\assets\logo_50.png" />
     <Content Include="App_Plugins\Archetype\assets\twitter.png" />
     <Content Include="App_Plugins\Archetype\css\archetype.css" />
@@ -3050,7 +3051,6 @@
     <Content Include="Views\Shared\_ContactForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Views\Article\" />
     <Folder Include="Views\ContactForm\" />
     <Folder Include="Views\ContactUs\" />

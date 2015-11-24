@@ -1,13 +1,33 @@
 ﻿
 @model ISB.Website.Models.SiteNavigation
 
-<nav>
-    <ul id="menu">
-        @foreach (var navigationItem in Model.TopNavigation.NavigationItems)
-        {
-            <li>
-                <a href="@(navigationItem.Url)" id="header-link-@(navigationItem.Name.ToLower().Replace(" ", "-"))" target="@(navigationItem.NewWindow)">@navigationItem.Name</a>
-            </li>
-        }
-    </ul>
+<nav class="navbar navbar-default navbar-sticky">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+
+        <div class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav">
+                @foreach (var navigationItem in Model.TopNavigation.NavigationItems)
+                {
+
+                
+                <li><a href="@(navigationItem.Url)" id="header-link-@(navigationItem.Name.ToLower().Replace(" ", "-"))" target="@(navigationItem.NewWindow)">@navigationItem.Name</a></li>
+                @*<li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Experience <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sidebar-left.html">Front End</a></li>
+                        <li><a href="sidebar-right.html">Right Sidebar</a></li>
+                        <li><a href="single.html">Blog Post</a></li>
+                    </ul>
+                </li>*@
+                }
+                <li><a href="https://ianbareham.wordpress.com/">Blog</a></li>
+            </ul>
+
+        </div><!--/.nav-collapse -->
+    </div>
 </nav>

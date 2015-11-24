@@ -1,0 +1,37 @@
+﻿@using ISB.Website.ViewModels;
+@using ISB.Website.ViewModels.DocTypes;
+@using ISB.Website.Models;
+
+@model Article
+
+<div class="row topspace">
+
+    <!-- Article main content -->
+    <article class="col-sm-8 maincontent">
+        <header class="page-header">
+            <h1 class="page-title">@Model.Title</h1>
+        </header>
+
+        <p>
+            @if (Model.Image != null)
+            {
+                @Html.Partial("~/Views/Shared/_image.cshtml", Model.Image)
+            }
+    </p>
+
+        @Html.Raw(Model.BodyText)
+
+</article>
+<!-- /Article -->
+<!-- Sidebar -->
+<aside class="col-md-4 sidebar sidebar-left">
+
+   @Html.Raw(Model.SideBarText)
+
+</aside>
+<!-- /Sidebar -->
+
+</div>
+
+
+

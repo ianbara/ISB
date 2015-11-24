@@ -1,0 +1,19 @@
+﻿@using System.Linq
+@using ISB.Website.ViewModels;
+@using System.Collections.Generic;
+
+@model List<Article>
+
+    <div class="row section featured topspace">
+        <h2 class="section-title"><span>Services</span></h2>
+        <div class="row">
+            @foreach (var article in Model)
+            {
+                <div class="col-sm-6 col-md-3">
+                    <h3 class="text-center">@article.Name</h3>
+                    <p>@article.Summary</p>
+                    <p class="text-center"><a href="@article.Url" class="btn btn-action">Read more</a></p>
+                </div>
+            }
+        </div>
+    </div>

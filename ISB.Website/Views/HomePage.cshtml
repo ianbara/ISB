@@ -8,27 +8,28 @@
 @{
     var poco = Model.Content.As<HomePage>();
     var featuredArticles = poco.FeaturedArticles.Select(a => a.As<Article>()).ToList();
+    var services = poco.Services.Select(a => a.As<Article>()).ToList();
 }
 
 
 <h1>@poco.PageTitle</h1>
 
 
-<p>
+@*<p>
     @poco.IntroText
 </p>
 
 @if (poco.Image != null)
 {
     @Html.Partial("~/Views/Shared/_image.cshtml", poco.Image)
-}
-
-
+}*@
 
 
 <h1>Metat data</h1>
 @poco.MetaTitle
 @poco.MetaDescription
+
+@Html.Partial("_services", services)
 
 
 @Html.Partial("_articles", featuredArticles)

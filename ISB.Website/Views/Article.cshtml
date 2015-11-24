@@ -6,20 +6,12 @@
 @using Our.Umbraco.Ditto
 @inherits UmbracoTemplatePage
 @{
-    var poco = Model.Content.As<Article>();
+    var article = Model.Content.As<Article>();
 }
 
-ARTICLE
-
-<h1>@poco.PageTitle</h1>
-
-
 <p>
-    @poco.Summary
+    @article.Summary
 </p>
 
 
-TEMPLATE (@poco.Template)
-
-
-
+@Html.Partial("~/Views/Article/_rightsidebar.cshtml", article)

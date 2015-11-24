@@ -8,6 +8,7 @@ using Our.Umbraco.Ditto;
 using Umbraco.Core;
 using Umbraco.Core.Models;
 using umbraco.presentation.webservices;
+using ISB.Website.ViewModels.DocTypes;
 
 namespace ISB.Website.ViewModels
 {
@@ -25,6 +26,8 @@ namespace ISB.Website.ViewModels
         public string BodyText { get; set; }
         public string Tags { get; set; }
         public string Template { get; set; }
+        public Image Image { get; set; }
+        public string SideBarText { get; set; }
 
         public List<string> TagsList
         {

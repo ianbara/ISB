@@ -40,6 +40,10 @@ namespace ISB.Website.ViewModels.DocTypes
         [TypeConverter(typeof(DittoPickerConverter))]
         public virtual IEnumerable<IPublishedContent> FeaturedArticles { get; set; }
 
+        [TypeConverter(typeof(DittoPickerConverter))]
+        public virtual IEnumerable<IPublishedContent> Services { get; set; }
+
+
 
         //  [ArchetypeResolver]
         // public List<ArchetypeFieldsetModel> ContentCollection { get; set; }

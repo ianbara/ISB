@@ -5,40 +5,149 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <title>@ViewBag.Title - Ian Bareham</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
         @Scripts.Render("~/scripts/jqueryval")
+
+        <!-- Bootstrap -->
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+        <!-- Icons -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="~/content/Site.css">
+
+        <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+
     </head>
-    <body>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-                    @Html.Action("SiteNavigation", "Home")
-                </div>
-            </div>
-        </header>
-        <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
+
+
+<body class="home">
+
+    <header id="header">
+        <div id="head" class="parallax" parallax-speed="2">
+            <h1 id="logo" class="text-center">
+                <img class="img-circle" src="assets/images/ian.jpg" alt="">
+                <span class="title">Ian Bareham</span>
+                <span class="tagline">
+                    Web Developer | Musician | Husband | Daddy<br>
+                    <a href="">ianbara@hotmail.com</a>
+                </span>
+            </h1>
         </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-          
+
+        
+    </header>
+
+    @Html.Action("SiteNavigation", "Home")
+
+    <main id="main">
+
+        <div class="container">
+            @RenderBody()
+        </div>
+
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 widget">
+                    <h3 class="widget-title">Contact</h3>
+                    <div class="widget-body">
+                        <p>
+                            07515281659<br>
+                            <a href="mailto:#">ianbara@hotmail.com</a><br>
+                            <br>
+                            Bradford, BD13 2BG
+                        </p>
+                        <p>
+                            <a href="http://blog.inkdigitalagency.com/2013/02/01/a-big-congrats-to-ian/"><img src="D:\Projects\Company\Inspiration\initio\Initio\assets\images\Kentico_CertifiedDeveloper_1200px.png"></a>
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </footer>
+
+                <div class="col-md-3 widget">
+                    <h3 class="widget-title">Follow me</h3>
+                    <div class="widget-body">
+                        <p class="follow-me-icons">
+                            <a href="https://twitter.com/ianbareham"><i class="fa fa-twitter fa-2"></i></a>
+                            <a href="https://github.com/ianbara"><i class="fa fa-github fa-2"></i></a>
+                            <a href="https://www.facebook.com/ianbara"><i class="fa fa-facebook fa-2"></i></a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 widget">
+                    <h3 class="widget-title">Need Help?</h3>
+                    <div class="widget-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 widget">
+                    <h3 class="widget-title">Form widget</h3>
+                    <div class="widget-body">
+                        <p>
+                            
+                            <a href="mailto:#">shout@ianbareham.com</a><br>
+                            <br>
+                            Bradford, Yorkshire, BD13 2BG
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- /row of widgets -->
+        </div>
+    </footer>
+
+    <footer id="underfooter">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 widget">
+                    <div class="widget-body">
+                        <p>Bradford, Yorkshire, BD13 2BG </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 widget">
+                    <div class="widget-body">
+                        <p class="text-right">
+                            Copyright &copy; 2015, Ian Bareham<br>
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- /row of widgets -->
+        </div>
+    </footer>
+
+
+
+    <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="assets/js/template.js"></script>
+
+
+
+
+
+
+
+
+
+
+@*                        @Html.Partial("_LoginPartial")*@
+                 
+              
+
 
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)

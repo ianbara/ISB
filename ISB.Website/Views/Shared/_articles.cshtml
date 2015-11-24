@@ -4,27 +4,35 @@
 
 @model List<Article>
 
+    <div class="row section recentworks topspace">
 
-    <ul>
-        @foreach (var article in Model)
-        {
-            <li>
-                <a href="@article.Url">@article.Name</a>
-                <p>@article.GetPropertyValue("Summary")</p>
+        <h2 class="section-title"><span>Recent Works</span></h2>
+
+        <div class="thumbnails recentworks row">
 
 
-
-
-                TAGS : @article.Tags
-                <ul>
-                    @foreach (var tag in article.TagsList)
+            @foreach (var article in Model)
+    {
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <a class="thumbnail" href="@article.Url">
+                        <span class="img">
+                            <img src="@article.Image.Url" alt="">
+                            <span class="cover"><span class="more">See details →</span></span>
+                        </span>
+                        <span class="title">@article.Name</span>
+                    </a>
+                    <span class="details">
+                        @foreach (var tag in article.TagsList)
                     {
-                        <li><a href="/articles?tag=@tag">@tag</a></li>
+                            <a href="/articles?tag=@tag">@tag</a><text> | </text>
                     }
+                    </span>
+                    <h4></h4>
+                    <p></p>
+                </div>
 
-                </ul>
 
-            </li>
 
-        }
-    </ul>
+    }
+        </div>
+    </div>

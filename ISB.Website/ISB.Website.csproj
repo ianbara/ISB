@@ -488,6 +488,25 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="Images\avatar_man.png" />
+    <Content Include="Images\avatar_woman.png" />
+    <Content Include="Images\bg_head.jpg" />
+    <Content Include="Images\crm.png" />
+    <Content Include="Images\events.png" />
+    <Content Include="Images\gt_favicon.png" />
+    <Content Include="Images\guy.svg" />
+    <Content Include="Images\ian.jpg" />
+    <Content Include="Images\Kentico_CertifiedDeveloper_1200px.png" />
+    <Content Include="Images\mac.jpg" />
+    <Content Include="Images\mobile_thumb.png" />
+    <Content Include="Images\proform.png" />
+    <Content Include="Images\s1.jpg" />
+    <Content Include="Images\s2.jpg" />
+    <Content Include="Images\sample_clients.png" />
+    <Content Include="Images\sample_clients_isb.png" />
+    <Content Include="Images\satsuma_thumb.png" />
+    <Content Include="Images\Tenet_MobileApp.png" />
+    <Content Include="Images\unipol_thumb.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.0.js" />
@@ -2874,19 +2893,6 @@
     </Content>
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Images\accent.png" />
-    <Content Include="Images\bullet.png" />
-    <Content Include="Images\heroAccent.png" />
-    <Content Include="Images\orderedList0.png" />
-    <Content Include="Images\orderedList1.png" />
-    <Content Include="Images\orderedList2.png" />
-    <Content Include="Images\orderedList3.png" />
-    <Content Include="Images\orderedList4.png" />
-    <Content Include="Images\orderedList5.png" />
-    <Content Include="Images\orderedList6.png" />
-    <Content Include="Images\orderedList7.png" />
-    <Content Include="Images\orderedList8.png" />
-    <Content Include="Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -3048,9 +3054,10 @@
     <Content Include="Views\ContactUs.cshtml" />
     <Content Include="Views\ContactForm.cshtml" />
     <Content Include="Views\Shared\_ContactForm.cshtml" />
+    <Content Include="Views\Article\_rightsidebar.cshtml" />
+    <Content Include="Views\Shared\_services.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Article\" />
     <Folder Include="Views\ContactForm\" />
     <Folder Include="Views\ContactUs\" />
     <Folder Include="Views\Templates\" />

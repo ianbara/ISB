@@ -538,6 +538,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="db.sqlce" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="Images\avatar_man.png" />
     <Content Include="Images\avatar_woman.png" />
@@ -2942,7 +2943,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\site.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
@@ -3103,7 +3104,6 @@
     <Content Include="umbraco\Webservices\UltimatePickerAutoCompleteHandler.ashx" />
     <Content Include="umbraco\Xslt\Web.config" />
     <Content Include="Views\ContactUs.cshtml" />
-    <Content Include="Views\ContactForm.cshtml" />
     <Content Include="Views\Shared\_ContactForm.cshtml" />
     <Content Include="Views\Article\_rightsidebar.cshtml" />
     <Content Include="Views\Shared\_services.cshtml" />

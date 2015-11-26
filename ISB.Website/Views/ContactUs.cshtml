@@ -8,15 +8,12 @@
 @*@inherits Umbraco.Web.Mvc.UmbracoViewPage<ISB.Website.ViewModels.DocTypes.Base.ViewModel<ContactUs>>*@
 @inherits UmbracoTemplatePage
 @{
-    var poco = Model.Content.As<ContactUs>();
-    
-    //var featuredArticles = poco.FeaturedArticles.Select(a => a.As<Article>()).ToList();
+    var contactUs = Model.Content.As<ContactUs>();
 }
 
 
 <h1>Contact Us</h1>
 
-@poco.BodyText
+@contactUs.BodyText
 
-@*@Html.Action("ContactForm", "Home")*@
 @Html.Partial("_ContactForm", new ContactForm())
